@@ -10,16 +10,16 @@
 
 :root{
     --color-primary:#FF5959;
-    --color-plan-box-1:#d1faff;
-    --color-plan-box-2:#facfcf;
+    --color-plan-box-1:#ddf9fd;
+    --color-plan-box-2:#fce1e1;
     --color-plan-box-3:#FFF4D6;
     --color-p:#707070;
     --color-black:#121212;
     --color-white:#FFFFFF;
 
     --width-lg: 80%;
-    --width-md: 90%;
-    --width-sm: 95%;
+    --width-md: 85%;
+    --width-sm: 90%;
 
     --transition: all ease-in 400ms;
 }
@@ -144,8 +144,44 @@ header h1{
     outline: none;
 }
 
+/* ==========donate plan ============== */
+.plan .plan-container> p{
+    padding: 0 200px 50px 200px;
+    text-align: center;
+}
 
-/* media query tablet */
+.plan .plan-container .plan-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+}
+
+.plan .plan-container .plan-content .plan-card{
+    padding: 55px 22px;
+}
+
+.plan .plan-container .plan-content .plan-card:nth-child(1){
+    background-color: var(--color-plan-box-1);
+}
+
+.plan .plan-container .plan-content .plan-card:nth-child(2){
+    background-color: var(--color-plan-box-2);
+}
+
+.plan .plan-container .plan-content .plan-card:nth-child(3){
+    background-color: var(--color-plan-box-3);
+}
+
+.plan .plan-container .plan-content .plan-card h3{
+    font-size: 24px;
+    font-weight: 600px;
+    padding: 30px 0 16px 0;
+}
+
+
+
+
+/* ====================media query tablet=========================== */
 @media screen and (max-width: 1024px) {
     .container{
         width: var(--width-md);
@@ -155,7 +191,7 @@ header h1{
         padding-top: 100px;
     }
 
-    /* header==== */
+    /* ======header==== */
     header{
         background: linear-gradient( rgba(0, 0, 0, 0.178), rgb(0, 0, 0)), url(./images/donation5-tablet-mobile.jpg) no-repeat;
         background-size: cover;
@@ -165,6 +201,8 @@ header h1{
         padding: 0 80px;
     }
 
+
+    /* =======today===== */
     .today-container{
         width: 80%;
     }
@@ -177,10 +215,20 @@ header h1{
         color: var(--color-p);
         padding: 33px 12px;
     }
+
+
+    /* ========plan======= */
+    .plan .plan-container .plan-content{
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
     
 }
 
 
+
+
+/* =================media query phone======================== */
 @media screen and (max-width: 600px){
     h2{
         font-weight: 700;
@@ -196,9 +244,7 @@ header h1{
         width: var(--container-width-sm);
     }
     
-    
-
-    /* header========= */
+    /* =========header========= */
     header{
         background: linear-gradient( rgba(0, 0, 0, 0.178), rgb(0, 0, 0)), url(./images/donation5-tablet-mobile.jpg) no-repeat;
         background-size: cover;
@@ -214,6 +260,8 @@ header h1{
         padding: 0 20px;
     }
 
+
+    /* =========today======== */
     .today-container{
         width: 90%;
     }
@@ -225,6 +273,21 @@ header h1{
         font-size: 18px;
         color: var(--color-p);
         padding: 22px 10px;
+    }
+
+    /* =======plan======== */
+    .plan .plan-container{
+        width: 90%;
+    }
+
+    .plan .plan-container> p{
+        padding:0 0 30px 0;
+        text-align: center;
+    }
+
+    .plan .plan-container .plan-content{
+        grid-template-columns: 1fr;
+        gap: 24px;
     }
 }
 
