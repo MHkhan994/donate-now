@@ -29,6 +29,7 @@ h2{
     font-size: 45px;
     line-height: 55px;
     text-align: center;
+    font-weight: 600;
     padding-bottom: 20px;
     color: var(--color-black);
 }
@@ -94,4 +95,50 @@ header h1{
 .header-container p{
     color: var(--color-white);
     padding: 15px 0 25px 0;
+}
+
+/* =========dontane today-============== */
+.today-container{
+    width: 60%;
+    text-align: center;
+}
+
+.today-container .today-money{
+    display: flex;
+    gap: 22px;
+    align-items:center;
+    justify-content: space-between;
+    padding: 55px 0;
+}
+
+.today-container .today-money h6{
+    font-size: 30px;
+    color: var(--color-p);
+    padding: 43px 22px;
+    border: 2px solid transparent;
+    transition: var(--transition);
+}
+
+.today-container .today-money h6:hover{
+    background-color: #FFEEEE;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    cursor: pointer;
+}
+
+.today-container input{
+    width: 100%;
+    text-align: center;
+    height: 30px;
+    font-size: 18px;
+    padding-bottom: 10px;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    margin-bottom: 30px;
+}
+
+.today-container input:focus{
+    outline: none;
 }
