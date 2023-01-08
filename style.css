@@ -104,7 +104,8 @@ header h1{
 }
 
 .today-container .today-money{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     gap: 22px;
     align-items:center;
     justify-content: space-between;
@@ -142,3 +143,88 @@ header h1{
 .today-container input:focus{
     outline: none;
 }
+
+
+/* media query tablet */
+@media screen and (max-width: 1024px) {
+    .container{
+        width: var(--width-md);
+    }
+
+    section{
+        padding-top: 100px;
+    }
+
+    /* header==== */
+    header{
+        background: linear-gradient( rgba(0, 0, 0, 0.178), rgb(0, 0, 0)), url(./images/donation5-tablet-mobile.jpg) no-repeat;
+        background-size: cover;
+    }
+
+    .header-container{
+        padding: 0 80px;
+    }
+
+    .today-container{
+        width: 80%;
+    }
+    .today-container .today-money{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .today-container .today-money h6{
+        font-size: 24px;
+        color: var(--color-p);
+        padding: 33px 12px;
+    }
+    
+}
+
+
+@media screen and (max-width: 600px){
+    h2{
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 45px;
+        text-align: center;
+        font-weight: 600;
+        padding-bottom: 20px;
+        color: var(--color-black);
+    }
+
+    .container{
+        width: var(--container-width-sm);
+    }
+    
+    
+
+    /* header========= */
+    header{
+        background: linear-gradient( rgba(0, 0, 0, 0.178), rgb(0, 0, 0)), url(./images/donation5-tablet-mobile.jpg) no-repeat;
+        background-size: cover;
+        height: 100vh;
+    }
+
+    header h1{
+        font-size: 45px;
+        line-height: 60px;
+    }
+
+    .header-container{
+        padding: 0 20px;
+    }
+
+    .today-container{
+        width: 90%;
+    }
+    .today-container .today-money{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .today-container .today-money h6{
+        font-size: 18px;
+        color: var(--color-p);
+        padding: 22px 10px;
+    }
+}
+
